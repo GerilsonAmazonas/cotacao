@@ -18,6 +18,7 @@ class DetalhesMoeda extends StatelessWidget {
             Text('Moeda: $moeda', style: TextStyle(fontSize: 24)),
             SizedBox(height: 10),
             Text('Valor: $valor', style: TextStyle(fontSize: 20)),
+            Text('Notícias sobre a moeda em breve... ', style: TextStyle(fontSize: 40),),
           ],
         ),
       ),
