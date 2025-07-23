@@ -1,5 +1,7 @@
+// arquivo  feito para dar uma tela de apresentação do APP
+
 import 'package:flutter/material.dart';
-import 'cotaçoes_screen.dart';
+import 'cotaçoes_screen.dart'; //para importar utilizar cotaçoes_screen
 
 class BoasVindasScreen extends StatelessWidget {
   @override

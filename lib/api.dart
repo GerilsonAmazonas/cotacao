@@ -1,3 +1,5 @@
+//ARQUIVO PARA CHAMADA  DO API - AS COTAÇOES DAS MOEDAS
+
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 

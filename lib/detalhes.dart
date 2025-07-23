@@ -1,10 +1,16 @@
+//ARQUIVO PARA DAR DETALHES DAS MOEDAS QUANDO SELECIONADA
+
 import 'package:flutter/material.dart';
 
 class DetalhesMoeda extends StatelessWidget {
-  final String moeda;
-  final String valor;
+  final String moeda; // O NOME DA MOEDA (Ex: DOLAR)
+  final String valor; // O VALOR DA MOEDA
 
-  const DetalhesMoeda({Key? key, required this.moeda, required this.valor}) : super(key: key);
+  const DetalhesMoeda({
+    Key? key, required this.moeda, required this.valor
+    }) : super(
+      key: key
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +24,7 @@ class DetalhesMoeda extends StatelessWidget {
             Text('Moeda: $moeda', style: TextStyle(fontSize: 24)),
             SizedBox(height: 10),
             Text('Valor: $valor', style: TextStyle(fontSize: 20)),
-            Text('Notícias sobre a moeda em breve... ', style: TextStyle(fontSize: 40),),
+            Text('Notícias sobre a moeda em breve... ', style: TextStyle(fontSize: 35),),
           ],
         ),
       ),

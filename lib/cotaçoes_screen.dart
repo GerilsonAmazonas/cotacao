@@ -9,7 +9,6 @@ class CotacoesScreen extends StatefulWidget {
 
 class _CotacoesScreenState extends State<CotacoesScreen> {
   Map<String, dynamic>? rates;
-  bool _stretch = true;
 
   @override
   void initState() {
@@ -24,65 +23,28 @@ class _CotacoesScreenState extends State<CotacoesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Cotações das Moedas')),
       body: rates == null
           ? Center(child: CircularProgressIndicator())
-          : CustomScrollView(
-            physics: const BouncingScrollPhysics(),
-            slivers: <Widget>[
-              SliverAppBar(
-                stretch: _stretch,
-                expandedHeight: 200.0,
-                stretchTriggerOffset: 300.0,
-                flexibleSpace:  const FlexibleSpaceBar(
-                  title: Text("Cotação Today"),
-                  background: FlutterLogo(),
-                ),
-              ),
-              SliverList(
-                delegate: SliverChildBuilderDelegate(
-                  (context, index) {
-                    String moeda = rates!.keys.elementAt(index);
-                    var valor = rates![moeda];
-                    return ListTile(
-                      title: Text(moeda),
-                      subtitle: Text(valor.toString()),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => DetalhesMoeda(
-                              moeda: moeda,
-                              valor: valor.toString(),
-                            ),
-                          ),
-                        );
-                      },
+          : ListView(
+              children: rates!.entries.map((entry) {
+                return ListTile(
+                  title: Text('${entry.key}'),
+                  subtitle: Text('${entry.value}'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => DetalhesMoeda(
+                          moeda: entry.key,
+                          valor: entry.value.toString(),
+                        ),
+                      ),
                     );
                   },
-                  childCount: rates!.length,
-                ),
-              ),
-            ],
-          ),
-      bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: const EdgeInsets.all(7),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text('Stretch'),
-              Switch(
-                value: _stretch,
-                onChanged: (val) {
-                  setState(() {
-                    _stretch = val;
-                  });
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+                );
+              }).toList(),
+            ),
     );
   }
 }

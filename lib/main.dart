@@ -1,14 +1,16 @@
+// Arquivo principal para a navegação
+
+// import são para a utilização de bibliotecas prontas do próprio  dart
 import 'package:cotacoes_app/boas_vindas.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; //junto com boas_vindas.dart feito por mim
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); //LINHA PARA ACIONAR O MYAPP PARA RODAR O APP
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(fontSize: 20),
         ),
       ),
-      home: BoasVindasScreen(),
+      home: BoasVindasScreen(), //LINHA IMPORTANTE PARA ACIONAR O CONTEÚDO PRINCIPAL
     );
   }
 }
