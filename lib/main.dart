@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
         scaffoldBackgroundColor: const Color.fromARGB(255, 132, 195, 255),
         textTheme: TextTheme(
-          bodyMedium: TextStyle(fontSize: 30),
+          bodyLarge: TextStyle(fontSize: 30), // texto e tamanho da moeda
+          bodyMedium: TextStyle(fontSize: 25), // text e tamanho do valor
         ),
       ),
       home: BoasVindasScreen(), //LINHA IMPORTANTE PARA ACIONAR O CONTEÚDO PRINCIPAL

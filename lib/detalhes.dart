@@ -7,12 +7,7 @@ class DetalhesMoeda extends StatelessWidget {
   final String valor; // O VALOR DA MOEDA
 
   const DetalhesMoeda({
-    Key? key,
-    required this.moeda,
-    required this.valor
-    }) : super(
-      key: key
-      );
+    Key? key,required this.moeda, required this.valor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
