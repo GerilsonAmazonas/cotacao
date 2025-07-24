@@ -7,7 +7,9 @@ class DetalhesMoeda extends StatelessWidget {
   final String valor; // O VALOR DA MOEDA
 
   const DetalhesMoeda({
-    Key? key, required this.moeda, required this.valor
+    Key? key,
+    required this.moeda,
+    required this.valor
     }) : super(
       key: key
       );
@@ -21,9 +23,10 @@ class DetalhesMoeda extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Moeda: $moeda', style: TextStyle(fontSize: 24)),
+            Text('Moeda: $moeda', style: TextStyle(fontSize: 35)),
             SizedBox(height: 10),
-            Text('Valor: $valor', style: TextStyle(fontSize: 20)),
+            Text('Valor: $valor', style: TextStyle(fontSize: 30)),
+            SizedBox(height: 30),
             Text('Notícias sobre a moeda em breve... ', style: TextStyle(fontSize: 35),),
           ],
         ),

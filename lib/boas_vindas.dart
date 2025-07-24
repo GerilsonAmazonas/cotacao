@@ -16,13 +16,13 @@ class BoasVindasScreen extends StatelessWidget {
             children: [
               Text(
                 'Bem-vindo ao Cotações de Moedas!',
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 20),
               Text(
                 'Acompanhe em tempo real as cotações de diversas moedas do mundo.',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 25),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 40),

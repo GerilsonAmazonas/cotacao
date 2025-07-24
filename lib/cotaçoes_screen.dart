@@ -23,7 +23,7 @@ class _CotacoesScreenState extends State<CotacoesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Cotações das Moedas')),
+      appBar: AppBar(title: Text('Cotações das Moedas em Tempo real')),
       body: rates == null
           ? Center(child: CircularProgressIndicator())
           : ListView(
